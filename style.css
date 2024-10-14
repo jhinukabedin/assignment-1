@@ -1,0 +1,356 @@
+/* Google Fonts Link */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+	list-style: none;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Montserrat", sans-serif;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.header-area {
+	background: #0082e6;
+	position: sticky; /* Make the header sticky */
+	top: 0; /* Stick to the top of the viewport */
+	z-index: 1000; /* Ensure the header is above other content */
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for visibility */
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 1140px;
+}
+
+nav {
+	/* background: #0082e6; */
+	height: 80px;
+}
+
+label.logo {
+	color: white;
+	font-size: 25px;
+	line-height: 80px;
+	font-weight: bold;
+}
+
+nav ul {
+	float: right;
+	margin-right: 20px;
+}
+
+nav ul li {
+	display: inline-block;
+	line-height: 80px;
+	margin: 0 5px;
+}
+
+nav ul li a {
+	color: white;
+	font-size: 17px;
+	padding: 7px 13px;
+	border-radius: 3px;
+	text-transform: uppercase;
+}
+
+a.active,
+a:hover {
+	background: #1b9bff;
+	transition: 0.5s;
+}
+
+.checkbtn {
+	font-size: 22px;
+	color: white;
+	float: right;
+	line-height: 80px;
+	margin-right: 30px;
+	cursor: pointer;
+	display: none;
+}
+
+#check {
+	display: none;
+}
+
+/* Hero section */
+#home {
+	background-image: url(img/hero-bg.jpeg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.hero-section {
+	height: 600px;
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	justify-content: center;
+	color: #fff;
+	background-color: #00000052;
+}
+
+.hero-content {
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	width: 100%;
+	align-items: center;
+}
+.hero-content h1 {
+	font-size: 45px;
+	margin-bottom: 15px;
+}
+.hero-content p {
+	font-size: 35px;
+	margin-bottom: 15px;
+}
+.hero-content a.btn {
+	background: #1b9bff;
+	padding: 15px 25px;
+	color: #fff;
+	font-weight: bold;
+	border-radius: 25px;
+}
+
+#about {
+	padding: 100px 60px;
+	margin: 20px 0;
+}
+
+#about h2 {
+	font-size: 32px;
+	margin-bottom: 20px;
+	color: #333;
+}
+
+#about p {
+	font-size: 18px;
+	line-height: 1.6;
+	color: #666;
+	margin-bottom: 15px;
+}
+
+/* Services */
+#services {
+	padding: 100px 60px;
+	background-color: #f5f5f5;
+	text-align: center;
+}
+
+#services h2 {
+	font-size: 32px;
+	margin-bottom: 30px;
+	color: #333;
+}
+
+.service-row {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+	justify-content: space-between;
+}
+
+.service-item {
+	flex: 1 1 calc(33.33% - 20px); /* 33% width for desktop */
+	box-sizing: border-box;
+	background-color: white;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease;
+}
+
+.service-item img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+.service-item h3 {
+	padding: 15px;
+	font-size: 20px;
+	background-color: #333;
+	color: white;
+	margin: 0;
+}
+
+.service-item:hover {
+	transform: translateY(-5px);
+}
+
+/* Portfolio */
+#portfolio {
+	padding: 100px 60px;
+	text-align: center;
+}
+
+#portfolio h2 {
+	font-size: 32px;
+	margin-bottom: 30px;
+	color: #333;
+}
+
+.portfolio-row {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+	justify-content: space-between;
+}
+
+.portfolio-item {
+	flex: 1 1 calc(33.33% - 20px); /* 33% width for desktop */
+	position: relative;
+	box-sizing: border-box;
+	background-color: white;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease;
+}
+
+.portfolio-item img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+.portfolio-item h3 {
+	padding: 15px;
+	font-size: 20px;
+	background-color: #333;
+	color: white;
+	margin: 0;
+}
+
+.portfolio-item:hover {
+	transform: translateY(-5px);
+}
+
+/* View Portfolio Button */
+.view-button {
+	display: none; /* Initially hidden */
+	position: absolute;
+	bottom: 15px; /* Positioning the button */
+	left: 50%;
+	transform: translateX(-50%);
+	padding: 10px 20px;
+	background-color: #ff6347; /* Button color */
+	color: white;
+	text-decoration: none;
+	border-radius: 5px;
+	transition: background-color 0.3s ease;
+}
+
+.portfolio-item:hover .view-button {
+	display: block; /* Show on hover */
+}
+
+.view-button:hover {
+	background-color: #ff4500; /* Button hover color */
+}
+
+/* Responsive design for mobile devices */
+
+/* Contact */
+#contact {
+	padding: 100px 60px;
+	background-color: #f5f5f5;
+	text-align: center;
+}
+
+#contact h2 {
+	font-size: 32px;
+	margin-bottom: 30px;
+	color: #333;
+}
+
+.form-group {
+	margin-bottom: 20px;
+	text-align: left;
+}
+
+.form-group label {
+	display: block;
+	margin-bottom: 5px;
+	font-size: 16px;
+	color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	font-size: 16px;
+}
+
+.btn {
+	padding: 10px 20px;
+	background-color: #ff6347;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 16px;
+	transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+	background-color: #ff4500; /* Button hover color */
+}
+
+/* Footer */
+footer {
+	background-color: #333;
+	color: white;
+	padding: 20px 0;
+	text-align: center;
+}
+
+.footer-content {
+	margin-bottom: 15px;
+}
+
+.footer-content h3 {
+	margin-bottom: 10px;
+	font-size: 24px;
+}
+
+.footer-content p {
+	margin: 5px 0;
+	font-size: 16px;
+}
+
+.social-links {
+	margin: 10px 0;
+}
+
+.social-links a {
+	margin: 0 10px;
+	color: white;
+	text-decoration: none;
+	transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+	color: #ff6347; /* Change color on hover */
+}
+
+.footer-bottom {
+	border-top: 1px solid rgba(255, 255, 255, 0.3);
+	padding-top: 10px;
+}
+
+.footer-bottom p {
+	font-size: 14px;
+}
